@@ -1,0 +1,13 @@
+{% block content %}
+    {% if form.errors %}
+        <div>
+            {% for key,value in form.errors.items %}
+                <strong>{{ key }}</strong> : {{ value.0}}</div><br/>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <form action="#" method="post">
+        {{ form.as_p}}
+        <button class="">Submit</button>
+    </form>
+{% endblock %}
